@@ -6,7 +6,7 @@ using UnityEngine.InputSystem;
 public class PlayerInput : MonoBehaviour
 {
     //Value variables
-    private Vector2 direction;
+    public Vector2 direction;
 
     //WASD input > Vector2 translator
     private void OnMovement(InputValue input)
