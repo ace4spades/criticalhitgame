@@ -12,6 +12,5 @@ public class PlayerInput : MonoBehaviour
     private void OnMovement(InputValue input)
     {
         direction = input.Get<Vector2>();
-        Debug.Log(direction);
 ;   }
 }
