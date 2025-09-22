@@ -11,11 +11,9 @@ public class PlayerInput : MonoBehaviour
     //Reference variables
     [SerializeField] Transform playerCam;
 
-
     //WASD input > Vector2 translator
     private void OnMovement(InputValue input)
     {
         direction = input.Get<Vector2>();
-        transform.rotation = Quaternion.Euler(transform.rotation.x, playerCam.eulerAngles.y, transform.rotation.z);
     }
 }

@@ -8,9 +8,7 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody rb;
     private PlayerInput playerInput;
     private Transform playerCam;
-
-    //Value variables
-    [SerializeField] float movementSpeed = 0f;
+    [SerializeField] private PlayerValues playerValues;
 
     private void Start()
     {
@@ -21,22 +19,26 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //transform.rotation = Quaternion.Euler(transform.rotation.x, playerCam.eulerAngles.y, transform.rotation.z);
+        transform.rotation = Quaternion.Euler(transform.rotation.x, playerCam.eulerAngles.y, transform.rotation.z);
     }
     //Movement logic
     private void FixedUpdate()
     {
-        //Translate the XY of direction variable into usable vector3 for movement
-        Vector3 moveInput = new Vector3(playerInput.direction.x, 0f, playerInput.direction.y);
+        Vector3 camForward = playerCam.forward;
+        camForward.y = 0f;
+        camForward.Normalize();
 
-        //Translate worldspace rotation to local rotation
-        Vector3 moveDirection = transform.TransformDirection(moveInput.normalized);
+        Vector3 camRight = playerCam.right;
+        camRight.y = 0f;
+        camRight.Normalize();
+
+        ////Translate XY > XZ
+        //Vector3 moveInput = new Vector3(playerInput.direction.x, 0f, playerInput.direction.y);
+        Vector3 moveInput = (camForward * playerInput.direction.y + camRight * playerInput.direction.x).normalized;
+        Debug.Log(moveInput);
 
         //Velocity application
-        rb.linearVelocity = (moveDirection * movementSpeed);
-
-        //rb.linearVelocity = new Vector3((moveInput.x * movementSpeed), 0f, (moveInput.z * movementSpeed)) * Time.deltaTime;
-
-        
+        rb.linearVelocity = Vector3.zero;
+        rb.linearVelocity = (moveInput * (playerInput.direction.magnitude * playerValues.movementSpeed)) * Time.fixedDeltaTime;
     }
 }
