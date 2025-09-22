@@ -33,7 +33,6 @@ public class PlayerMovement : MonoBehaviour
         camRight.Normalize();
 
         ////Translate XY > XZ
-        //Vector3 moveInput = new Vector3(playerInput.direction.x, 0f, playerInput.direction.y);
         Vector3 moveInput = (camForward * playerInput.direction.y + camRight * playerInput.direction.x).normalized;
         Debug.Log(moveInput);
 
