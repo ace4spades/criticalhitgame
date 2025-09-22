@@ -28,7 +28,14 @@ public class PlayerMovement : MonoBehaviour
     {
         //Translate the XY of direction variable into usable vector3 for movement
         Vector3 moveInput = new Vector3(playerInput.direction.x, 0f, playerInput.direction.y);
-        rb.linearVelocity = new Vector3((moveInput.x * movementSpeed), 0f, (moveInput.z * movementSpeed)) * Time.deltaTime;
+
+        //Translate worldspace rotation to local rotation
+        Vector3 moveDirection = transform.TransformDirection(moveInput.normalized);
+
+        //Velocity application
+        rb.linearVelocity = (moveDirection * movementSpeed);
+
+        //rb.linearVelocity = new Vector3((moveInput.x * movementSpeed), 0f, (moveInput.z * movementSpeed)) * Time.deltaTime;
 
         
     }
