@@ -6,14 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     //Reference variables
     private Rigidbody rb;
-    private PlayerInput playerInput;
+    private InputHandler inputHandler;
     private Transform playerCam;
     [SerializeField] private PlayerValues playerValues;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        playerInput = GetComponent<PlayerInput>();
+        inputHandler = GetComponent<InputHandler>();
         playerCam = Camera.main.transform;
     }
 
@@ -24,20 +24,11 @@ public class PlayerMovement : MonoBehaviour
     //Movement logic
     private void FixedUpdate()
     {
-        Vector3 camForward = playerCam.forward;
-        camForward.y = 0f;
-        camForward.Normalize();
-
-        Vector3 camRight = playerCam.right;
-        camRight.y = 0f;
-        camRight.Normalize();
-
         ////Translate XY > XZ
-        Vector3 moveInput = (camForward * playerInput.direction.y + camRight * playerInput.direction.x).normalized;
-        Debug.Log(moveInput);
+        Vector3 moveInput = ((transform.forward * inputHandler.direction.y) + (transform.right * inputHandler.direction.x)).normalized;
 
         //Velocity application
         rb.linearVelocity = Vector3.zero;
-        rb.linearVelocity = (moveInput * (playerInput.direction.magnitude * playerValues.movementSpeed)) * Time.fixedDeltaTime;
+        rb.linearVelocity = (moveInput * (inputHandler.direction.magnitude * playerValues.movementSpeed)) * Time.fixedDeltaTime;
     }
 }
