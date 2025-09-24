@@ -11,9 +11,7 @@ public class PlayerJump : MonoBehaviour
     //Value variables
     private LayerMask world;
     public bool onGrounded;
-    public bool canJump;
-    [SerializeField] private float coyoteTime = 1f;
-    private float groundDrag;
+    bool canDoubleJump;
 
     private void Start()
     {
@@ -22,32 +20,27 @@ public class PlayerJump : MonoBehaviour
         world = LayerMask.GetMask("World");
     }
 
+    //Jump logic
     public void Jump()
     {
-        if (canJump == true)
+        //First jump
+        if (onGrounded == true)
         {
-            onGrounded = false;
-            rb.AddForce(Vector3.up * playerValues.jumpHeight);
-            coyoteTime = 0f;
-            Debug.Log("Jumped");
+            rb.AddForce(Vector3.up * playerValues.jumpHeight, ForceMode.Impulse);
+            canDoubleJump = true;
+        }
+        //Second jump
+        if (onGrounded == false && canDoubleJump == true)
+        {
+            rb.linearVelocity = Vector3.zero;
+            rb.AddForce(Vector3.up * playerValues.jumpHeight * 0.9f, ForceMode.Impulse);
+            canDoubleJump = false;
         }
     }
 
     private void Update()
     {
+        //Ground check
         onGrounded = Physics.BoxCast(transform.position + Vector3.down * 0.5f, new Vector3(0.5f, 0.1f, 0.5f), Vector3.down, Quaternion.identity, 0.4f, world);
-        if (onGrounded == false)
-        {
-            coyoteTime -= Time.deltaTime;
-            if (coyoteTime < 0)
-            {
-                canJump = false;
-            }
-        }
-        if (onGrounded == true)
-        {
-            coyoteTime = 1f;
-            canJump = true;
-        }
     }
 }

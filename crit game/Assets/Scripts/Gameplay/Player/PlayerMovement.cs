@@ -22,9 +22,17 @@ public class PlayerMovement : MonoBehaviour
 
     private void Update()
     {
-        //Keeps the player looking forward
+        //Keeps player looking forward
         transform.rotation = Quaternion.Euler(transform.rotation.x, playerCam.eulerAngles.y, transform.rotation.z);
-        Debug.Log(playerJump.onGrounded);
+
+        if (playerJump.onGrounded == true)
+        {
+            rb.linearDamping = 1.0f;
+        }
+        if (playerJump.onGrounded == false)
+        {
+            rb.linearDamping = 2.5f;
+        }
     }
 
     
@@ -36,4 +44,7 @@ public class PlayerMovement : MonoBehaviour
         //Velocity application
         rb.AddForce(moveInput * (inputHandler.direction.magnitude * playerValues.movementSpeed));
     }
+    
+    //Speed limit
+    
 }
