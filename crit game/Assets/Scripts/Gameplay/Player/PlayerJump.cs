@@ -2,15 +2,17 @@ using UnityEngine;
 
 public class PlayerJump : MonoBehaviour
 {
-    private InputHandler inputHandler;
-
+    //Reference variables
+    private Rigidbody rb;
+    private PlayerValues playerValues;
     private void Start()
     {
-        inputHandler = GetComponent<InputHandler>();
+        rb = GetComponent<Rigidbody>();
+        playerValues = GetComponent<PlayerValues>();
     }
 
-    private void Jump()
+    public void Jump()
     {
-        Debug.Log("Attempting to addforce");
+        rb.AddForce(transform.up * 10f);
     }
 }

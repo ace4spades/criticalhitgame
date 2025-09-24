@@ -6,14 +6,14 @@ public class PlayerMovement : MonoBehaviour
 {
     //Reference variables
     private Rigidbody rb;
-    private InputHandler inputHandler;
+    private UpdatedInputHandler inputHandler;
     private Transform playerCam;
     [SerializeField] private PlayerValues playerValues;
 
     private void Start()
     {
         rb = GetComponent<Rigidbody>();
-        inputHandler = GetComponent<InputHandler>();
+        inputHandler = GetComponent<UpdatedInputHandler>();
         playerCam = Camera.main.transform;
     }
 
