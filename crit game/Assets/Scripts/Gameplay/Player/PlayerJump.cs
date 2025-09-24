@@ -13,6 +13,6 @@ public class PlayerJump : MonoBehaviour
 
     public void Jump()
     {
-        rb.AddForce(transform.up * 10f);
+        rb.AddForce(transform.up * playerValues.jumpHeight);
     }
 }
