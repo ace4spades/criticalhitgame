@@ -48,6 +48,6 @@ public class UpdatedInputHandler : MonoBehaviour
     }
     private void OnJump(InputAction.CallbackContext context)
     {
-        //playerJump.Jump();
+        playerJump.Jump();
     }
 }

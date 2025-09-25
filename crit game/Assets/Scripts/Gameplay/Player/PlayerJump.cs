@@ -5,44 +5,51 @@ using static UnityEngine.UI.Image;
 public class PlayerJump : MonoBehaviour
 {
     //Reference variables
-    private Rigidbody rb;
     private PlayerValues playerValues;
+    private CharacterController controller;
+    [SerializeField] ParticleSystem doubleJumpParticle;
 
     //Value variables
-    private LayerMask world;
-    public bool onGrounded;
-    bool canDoubleJump;
-
+    private float gravity = -20f;
+    private Vector3 velocity;
+    private bool canDoubleJump = false;
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
         playerValues = GetComponent<PlayerValues>();
-        world = LayerMask.GetMask("World");
+        controller = GetComponent<CharacterController>();
+    }
+    private void Update()
+    {
+        //Gravity
+        if (controller.isGrounded && velocity.y < 0)
+        {
+            velocity.y = -2f;
+        }
+
+
+        if (velocity.y < 0)
+        {
+            velocity.y += gravity * 2f * Time.deltaTime;
+        } else
+        {
+            velocity.y += gravity * Time.deltaTime;
+
+        }
+        controller.Move(velocity * Time.deltaTime);
     }
 
-    //Jump logic
-    //public void Jump()
-    //{
-    //    //First jump
-    //    if (onGrounded == true)
-    //    {
-    //        //rb.AddForce(Vector3.up * playerValues.jumpHeight, ForceMode.Impulse);
-    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, playerValues.jumpHeight, rb.linearVelocity.z);
-    //        canDoubleJump = true;
-    //    }
-    //    //Second jump
-    //    if (onGrounded == false && canDoubleJump == true)
-    //    {
-    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
-    //        //rb.AddForce(Vector3.up * playerValues.jumpHeight * 0.9f, ForceMode.Impulse);
-    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, playerValues.jumpHeight * 0.9f, rb.linearVelocity.z);
-    //        canDoubleJump = false;
-    //    }
-    //}
 
-    //private void Update()
-    //{
-    //    //Ground check
-    //    onGrounded = Physics.BoxCast(transform.position + Vector3.down * 0.5f, new Vector3(0.5f, 0.1f, 0.5f), Vector3.down, Quaternion.identity, 0.4f, world);
-    //}
+    public void Jump()
+    {
+        if (controller.isGrounded == true)
+        {
+            velocity.y = Mathf.Sqrt(playerValues.jumpHeight * -2f * gravity);
+            canDoubleJump = true;
+        }
+        if (controller.isGrounded == false && canDoubleJump == true)
+        {
+            velocity.y = Mathf.Sqrt((playerValues.jumpHeight * 0.9f) * -2f * gravity);
+            canDoubleJump = false;
+        }
+    }
 }
