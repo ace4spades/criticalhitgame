@@ -456,10 +456,10 @@ MonoBehaviour:
       serializedVersion: 2
       x: 0
       y: 21
-      width: 573
-      height: 442
-    m_Scale: {x: 0.2984375, y: 0.2984375}
-    m_Translation: {x: 286.5, y: 221}
+      width: 765
+      height: 631
+    m_Scale: {x: 0.3984375, y: 0.3984375}
+    m_Translation: {x: 382.5, y: 315.5}
     m_MarginLeft: 0
     m_MarginRight: 0
     m_MarginTop: 0
@@ -467,12 +467,12 @@ MonoBehaviour:
     m_LastShownAreaInsideMargins:
       serializedVersion: 2
       x: -960
-      y: -740.52356
+      y: -791.84314
       width: 1920
-      height: 1481.0471
+      height: 1583.6863
     m_MinimalGUI: 1
-  m_defaultScale: 0.2984375
-  m_LastWindowPixelSize: {x: 573, y: 463}
+  m_defaultScale: 0.3984375
+  m_LastWindowPixelSize: {x: 765, y: 652}
   m_ClearInEditMode: 1
   m_NoCameraWarning: 1
   m_LowResolutionForAspectRatios: 01000000000000000000
@@ -1110,7 +1110,7 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: 1.1728375, y: 6.1736355, z: 5.9960213}
+    m_Target: {x: 58.87103, y: 263.36493, z: -15.457518}
     speed: 2
     m_Value: {x: 1.1728375, y: 6.1736355, z: 5.9960213}
   m_RenderMode: 0
@@ -1158,11 +1158,11 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.08821801, y: 0.6913807, z: -0.085698426, w: 0.7120146}
+    m_Target: {x: -0.03846811, y: 0.89734334, z: -0.079906754, w: -0.43245685}
     speed: 2
     m_Value: {x: 0.08821802, y: 0.6913807, z: -0.085698426, w: 0.7120146}
   m_Size:
-    m_Target: 2.2193017
+    m_Target: 1.2247449
     speed: 2
     m_Value: 2.2193017
   m_Ortho:
@@ -1265,7 +1265,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: e0b00000
     m_LastClickedID: 45280
-    m_ExpandedIDs: 00000000ecae0000eeae0000
+    m_ExpandedIDs: 0000000008af00000aaf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000ecae0000eeae0000
+    m_ExpandedIDs: 0000000008af00000aaf0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
