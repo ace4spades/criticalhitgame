@@ -21,26 +21,28 @@ public class PlayerJump : MonoBehaviour
     }
 
     //Jump logic
-    public void Jump()
-    {
-        //First jump
-        if (onGrounded == true)
-        {
-            rb.AddForce(Vector3.up * playerValues.jumpHeight, ForceMode.Impulse);
-            canDoubleJump = true;
-        }
-        //Second jump
-        if (onGrounded == false && canDoubleJump == true)
-        {
-            rb.linearVelocity = Vector3.zero;
-            rb.AddForce(Vector3.up * playerValues.jumpHeight * 0.9f, ForceMode.Impulse);
-            canDoubleJump = false;
-        }
-    }
+    //public void Jump()
+    //{
+    //    //First jump
+    //    if (onGrounded == true)
+    //    {
+    //        //rb.AddForce(Vector3.up * playerValues.jumpHeight, ForceMode.Impulse);
+    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, playerValues.jumpHeight, rb.linearVelocity.z);
+    //        canDoubleJump = true;
+    //    }
+    //    //Second jump
+    //    if (onGrounded == false && canDoubleJump == true)
+    //    {
+    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+    //        //rb.AddForce(Vector3.up * playerValues.jumpHeight * 0.9f, ForceMode.Impulse);
+    //        rb.linearVelocity = new Vector3(rb.linearVelocity.x, playerValues.jumpHeight * 0.9f, rb.linearVelocity.z);
+    //        canDoubleJump = false;
+    //    }
+    //}
 
-    private void Update()
-    {
-        //Ground check
-        onGrounded = Physics.BoxCast(transform.position + Vector3.down * 0.5f, new Vector3(0.5f, 0.1f, 0.5f), Vector3.down, Quaternion.identity, 0.4f, world);
-    }
+    //private void Update()
+    //{
+    //    //Ground check
+    //    onGrounded = Physics.BoxCast(transform.position + Vector3.down * 0.5f, new Vector3(0.5f, 0.1f, 0.5f), Vector3.down, Quaternion.identity, 0.4f, world);
+    //}
 }

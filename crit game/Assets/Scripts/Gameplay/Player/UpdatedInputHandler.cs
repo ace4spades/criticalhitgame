@@ -9,7 +9,7 @@ public class UpdatedInputHandler : MonoBehaviour
     public InputActionAsset playerInput;
     private PlayerActionMap controls;
     private PlayerJump playerJump;
-    private Rigidbody rb;
+    private PlayerMovement playerMovement;
     //Value variables
     public Vector2 direction;
 
@@ -24,7 +24,7 @@ public class UpdatedInputHandler : MonoBehaviour
     private void Start()
     {
         playerJump = GetComponent<PlayerJump>();
-        rb = GetComponent<Rigidbody>();
+        playerMovement = GetComponent<PlayerMovement>();
     }
     //Enables/Disables "Player" action map
     private void OnEnable()
@@ -44,9 +44,10 @@ public class UpdatedInputHandler : MonoBehaviour
     private void OnMovementCancel(InputAction.CallbackContext context)
     {
         direction = Vector2.zero;
+        //playerMovement.CounterForce();
     }
     private void OnJump(InputAction.CallbackContext context)
     {
-        playerJump.Jump();
+        //playerJump.Jump();
     }
 }

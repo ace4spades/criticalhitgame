@@ -1,50 +1,93 @@
-using Unity.Cinemachine;
 using UnityEngine;
-using UnityEngine.UIElements;
 
 public class PlayerMovement : MonoBehaviour
 {
     //Reference variables
-    private Rigidbody rb;
     private UpdatedInputHandler inputHandler;
-    private Transform playerCam;
     private PlayerValues playerValues;
     private PlayerJump playerJump;
-
+    private CharacterController controller;
     private void Start()
     {
-        rb = GetComponent<Rigidbody>();
         inputHandler = GetComponent<UpdatedInputHandler>();
-        playerCam = Camera.main.transform;
         playerValues = GetComponent<PlayerValues>();
         playerJump = GetComponent<PlayerJump>();
+        controller = GetComponent<CharacterController>();
     }
 
     private void Update()
     {
         //Keeps player looking forward
-        transform.rotation = Quaternion.Euler(transform.rotation.x, playerCam.eulerAngles.y, transform.rotation.z);
-
-        if (playerJump.onGrounded == true)
-        {
-            rb.linearDamping = 1.0f;
-        }
-        if (playerJump.onGrounded == false)
-        {
-            rb.linearDamping = 2.5f;
-        }
-    }
-
-    
-    private void FixedUpdate()
-    {
-        ////Translate XY > XZ
+        transform.rotation = Quaternion.Euler(transform.rotation.x, Camera.main.transform.eulerAngles.y, transform.rotation.z);
+        
+        //Movement logic
         Vector3 moveInput = ((transform.forward * inputHandler.direction.y) + (transform.right * inputHandler.direction.x)).normalized;
 
-        //Velocity application
-        rb.AddForce(moveInput * (inputHandler.direction.magnitude * playerValues.movementSpeed));
+        controller.Move(moveInput * (inputHandler.direction.magnitude * playerValues.movementSpeed) * Time.deltaTime);
     }
-    
-    //Speed limit
-    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //private void FixedUpdate()
+    //{
+    //    //Applies downward force to prevent player from floating
+    //    if (playerJump.onGrounded == false)
+    //    {
+    //        rb.AddForce(playerGravity * Vector3.down);
+    //    }
+
+    //    ////Translate XY > XZ
+    //    Vector3 moveInput = ((transform.forward * inputHandler.direction.y) + (transform.right * inputHandler.direction.x)).normalized;
+
+    //    //Rigidbody movement
+    //    rb.AddForce(moveInput * (inputHandler.direction.magnitude * playerValues.movementSpeed), ForceMode.VelocityChange);
+
+    //    //Lerp velocity to 0 to prevent skating
+    //    if (inputHandler.direction == Vector2.zero)
+    //    {
+    //       // Vector3 groundVelocity = new Vector3(rb.linearVelocity.x, 0f, rb.linearVelocity.z);
+    //       // rb.linearVelocity = Vector3.Lerp(groundVelocity, Vector3.zero, 0.5f);
+    //    }
+    //}
+
+    //Counter force, prevents slippery movement
+    //public void CounterForce()
+    //{
+    //    Vector3 reverseMoveInput = ((-transform.forward * inputHandler.direction.y) + (-transform.right * inputHandler.direction.x).normalized);
+    //    rb.AddForce(reverseMoveInput * 150f, ForceMode.Force);
+    //    //inputHandler.direction = Vector2.zero;
+    //}
 }
