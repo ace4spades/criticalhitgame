@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour
         controller = GetComponent<CharacterController>();
     }
 
+    //Movement
     private void Update()
     {
         //Keeps player looking forward

@@ -3,7 +3,7 @@ using UnityEngine;
 
 public class LesserGolemState : Enemy
 {
-    //State machine
+    //State machine: Enum
     [SerializeField] public enum State
     {
         Idle,
@@ -11,22 +11,30 @@ public class LesserGolemState : Enemy
         Frenzy
     }
     public State state;
+
     //Reference variables
     private LesserGolemIdle idleBehavior;
+    private LesserGolemSearch searchBehavior;
+
     private LesserGolemAggressive aggressiveBehavior;
 
     private void Start()
     {
         idleBehavior = GetComponent<LesserGolemIdle>();
         aggressiveBehavior = GetComponent<LesserGolemAggressive>();
+        searchBehavior = GetComponent <LesserGolemSearch>();
     }
 
-    private void Update()
+
+
+    public void Update()
     {
+        //State machine: Switch statement
         switch(state)
         {
             case State.Idle:
                 idleBehavior.IdleBehavior();
+                searchBehavior.LookingForPlayer();
                 break;
 
             case State.Aggresive:

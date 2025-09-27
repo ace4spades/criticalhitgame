@@ -111,7 +111,7 @@ Transform:
   m_GameObject: {fileID: 176438797362462892}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 0, y: 1, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
@@ -135,6 +135,7 @@ GameObject:
   - component: {fileID: 5539305008391373151}
   - component: {fileID: 2535635406493324368}
   - component: {fileID: 8294424626964283205}
+  - component: {fileID: 224597992112856970}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -249,7 +250,30 @@ CharacterController:
   m_StepOffset: 0.3
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Center: {x: 0, y: 1, z: 0}
+--- !u!136 &224597992112856970
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 773905546666267008}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.5
+  m_Height: 1.9856627
+  m_Direction: 1
+  m_Center: {x: 0, y: 1.0144285, z: 0}
 --- !u!1 &2210034560341642049
 GameObject:
   m_ObjectHideFlags: 0
@@ -347,7 +371,6 @@ GameObject:
   - component: {fileID: 2778728321033633646}
   - component: {fileID: 837773098045294417}
   - component: {fileID: 134413557840308913}
-  - component: {fileID: 4128089281291372515}
   m_Layer: 0
   m_Name: Main body
   m_TagString: Untagged
@@ -423,26 +446,3 @@ MeshRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_AdditionalVertexStreams: {fileID: 0}
---- !u!136 &4128089281291372515
-CapsuleCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 8088379811644357214}
-  m_Material: {fileID: 13400000, guid: 90cd9543bf93ebe498f87faa4a5c7bb4, type: 2}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 0
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 2
-  m_Direction: 1
-  m_Center: {x: 0, y: 0, z: 0}
