@@ -120,7 +120,7 @@ MonoBehaviour:
   m_MinSize: {x: 400, y: 100}
   m_MaxSize: {x: 32384, y: 16192}
   vertical: 0
-  controlID: 137
+  controlID: 52
   draggingID: 0
 --- !u!114 &6
 MonoBehaviour:
@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 57
+  controlID: 53
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 58
+  controlID: 54
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -520,7 +520,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: e218ffff20fbffff
+      m_ExpandedIDs: c26effff54aaffff20fbffff
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1110,9 +1110,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -8.89226, y: -2.7610652, z: 31.190918}
+    m_Target: {x: 15.46319, y: 9.984396, z: 2.9488564}
     speed: 2
-    m_Value: {x: -8.89226, y: -2.7610652, z: 31.190918}
+    m_Value: {x: 15.46319, y: 9.984396, z: 2.9488564}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1158,13 +1158,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: -0.07091719, y: 0.18829978, z: -0.013784227, w: -0.9795992}
+    m_Target: {x: -0.23687516, y: 0.42522156, z: -0.11695987, w: -0.865902}
     speed: 2
-    m_Value: {x: -0.07091719, y: 0.18829978, z: -0.013784227, w: -0.9795991}
+    m_Value: {x: -0.23687516, y: 0.42522156, z: -0.11695987, w: -0.865902}
   m_Size:
-    m_Target: 21.051863
+    m_Target: 3.0550542
     speed: 2
-    m_Value: 21.051863
+    m_Value: 3.0550542
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1245,7 +1245,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies
+    - Assets/Prefabs/Enemies/Lesser golem
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1255,7 +1255,7 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies
+  - Assets/Prefabs/Enemies/Lesser golem
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GLU\Jaar 2\Critical hit game\critical_hit_game\criticalhitgame\crit
     game
@@ -1263,9 +1263,9 @@ MonoBehaviour:
     m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: 00b30000
-    m_LastClickedID: 45824
-    m_ExpandedIDs: 00000000d2af0000d4af0000d6af0000d8af0000
+    m_SelectedIDs: d0b10000
+    m_LastClickedID: 45520
+    m_ExpandedIDs: 000000008eaf000090af000092af000094af000096af000098af0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1294,7 +1294,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 00000000d2af0000d4af0000d6af0000d8af0000
+    m_ExpandedIDs: 000000008eaf000090af000092af000094af000096af000098af0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
