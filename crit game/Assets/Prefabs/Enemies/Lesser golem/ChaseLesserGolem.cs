@@ -10,7 +10,7 @@ public class ChaseLesserGolem : Enemy
     private NavMeshAgent agent;
 
     //Value variables
-    public float attackRange = 3f;
+    public float attackRange = 9f;
 
     private void Start()
     {

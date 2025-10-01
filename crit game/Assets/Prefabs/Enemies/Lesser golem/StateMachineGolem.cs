@@ -27,8 +27,6 @@ public class StateMachineGolem : Enemy
         attack = GetComponent<AttackLesserGolem>();
     }
 
-
-
     public void Update()
     {
         //State machine: Switch statement
