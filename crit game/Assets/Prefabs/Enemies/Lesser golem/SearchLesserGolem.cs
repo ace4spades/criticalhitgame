@@ -1,7 +1,8 @@
 using UnityEngine;
 using System.Collections;
 using System.Runtime.CompilerServices;
-public class LesserGolemSearch : Enemy
+using UnityEngine.AI;
+public class SearchLesserGolem : Enemy
 {
     //Value variables
     private bool coroutineRunning;
@@ -9,12 +10,13 @@ public class LesserGolemSearch : Enemy
     private float aggroRange = 30f;
 
     //Reference variables
-    private LesserGolemState stateMachine;
-
+    private StateMachineGolem stateMachine;
+    private NavMeshAgent agent;
     private void Start()
     {
         playerMask = LayerMask.GetMask("Player");
-        stateMachine = GetComponent<LesserGolemState>();
+        stateMachine = GetComponent<StateMachineGolem>();
+        agent = GetComponent<NavMeshAgent>();
     }
     //Detection logic
     IEnumerator Searching()
@@ -23,14 +25,15 @@ public class LesserGolemSearch : Enemy
 
         //Detection spherecast
         Collider[] playersSpotted = Physics.OverlapSphere(transform.position, aggroRange, playerMask);
+        //If player is spotted: start chasing
         if (playersSpotted.Length > 0)
         {
-            Debug.Log("Player spotted");
+            agent.ResetPath();
+            agent.speed = 5f;
+            stateMachine.state = StateMachineGolem.State.Chasing;
             StopCoroutine(Searching());
-            stateMachine.state = LesserGolemState.State.Aggresive;
         }
-
-
+        //If player isn't spotted: return null
         coroutineRunning = false;
         yield return null;
     }
@@ -43,11 +46,5 @@ public class LesserGolemSearch : Enemy
             coroutineRunning = true;
             StartCoroutine(Searching());
         }
-    }
-    bool TargetWasFound(Vector3 enemyPosition, Vector3 playerPosition, out bool targetFound)
-    {
-
-        targetFound = false;
-        return targetFound;
     }
 }

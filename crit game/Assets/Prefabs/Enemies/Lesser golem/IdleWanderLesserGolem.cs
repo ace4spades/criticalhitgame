@@ -3,12 +3,15 @@ using UnityEngine;
 using UnityEngine.AI;
 using System.Collections;
 
-public class LesserGolemIdle : Enemy
+public class IdleWanderLesserGolem : Enemy
 {
     //Value variables
     private float maxWanderDistance = 10f;
     private Vector3 newDestination;
     private bool coroutineRunning;
+
+    //Reference variables
+    private NavMeshAgent agent;
 
     private void Start()
     {
@@ -25,7 +28,7 @@ public class LesserGolemIdle : Enemy
     }
 
     //Idle behavior
-    public void IdleBehavior()
+    public void IdleWander()
     {
         //If golem is close enough to destination, generate new destination
         if (agent.remainingDistance <= agent.stoppingDistance)

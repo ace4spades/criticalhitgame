@@ -1306,41 +1306,9 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
-    - target: {fileID: 999625344766684939, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 2224914852842074836, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
     - target: {fileID: 3750272318124498477, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
       propertyPath: m_Name
       value: Lesser golem
-      objectReference: {fileID: 0}
-    - target: {fileID: 3750272318124498477, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
-    - target: {fileID: 3750272318124498477, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_TagString
-      value: Enemy
-      objectReference: {fileID: 0}
-    - target: {fileID: 4059766080278121163, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Size.x
-      value: 2.1425838
-      objectReference: {fileID: 0}
-    - target: {fileID: 4059766080278121163, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Size.y
-      value: 2.1478882
-      objectReference: {fileID: 0}
-    - target: {fileID: 4059766080278121163, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Center.x
-      value: 0.019174814
-      objectReference: {fileID: 0}
-    - target: {fileID: 4059766080278121163, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Center.y
-      value: 2.0779238
       objectReference: {fileID: 0}
     - target: {fileID: 4345047714821837231, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1382,10 +1350,18 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
-    - target: {fileID: 8995860019903683801, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
-      propertyPath: m_Layer
-      value: 8
-      objectReference: {fileID: 0}
+    - target: {fileID: 5425161706469006436, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
+      propertyPath: golemPulse
+      value: 
+      objectReference: {fileID: 168749906554525878, guid: 6605aafe19c7e7c41867e11b72b2b055, type: 3}
+    - target: {fileID: 7052557887464923564, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
+      propertyPath: playerPosition
+      value: 
+      objectReference: {fileID: 200450207}
+    - target: {fileID: 7052557887464923564, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
+      propertyPath: playerTransform
+      value: 
+      objectReference: {fileID: 200450207}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
