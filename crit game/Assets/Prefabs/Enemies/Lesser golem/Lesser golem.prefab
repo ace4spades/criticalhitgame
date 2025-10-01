@@ -474,7 +474,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 81fd36a0d9bca1e44977a388d32f2089, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerPosition: {fileID: 0}
+  playerTransform: {fileID: 0}
+  attackRange: 3
 --- !u!114 &5425161706469006436
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -487,6 +488,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4c1c716aba219442bb936af4658f0f4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  golemPulse: {fileID: 168749906554525878, guid: 6605aafe19c7e7c41867e11b72b2b055, type: 3}
 --- !u!1 &5375319059432200127
 GameObject:
   m_ObjectHideFlags: 0
