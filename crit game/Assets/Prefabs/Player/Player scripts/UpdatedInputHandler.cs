@@ -9,7 +9,8 @@ public class UpdatedInputHandler : MonoBehaviour
     public InputActionAsset playerInput;
     private PlayerActionMap controls;
     private PlayerJump playerJump;
-    private PlayerMovement playerMovement;
+    private PlayerAttack playerAttack;
+
     //Value variables
     public Vector2 direction;
 
@@ -19,12 +20,13 @@ public class UpdatedInputHandler : MonoBehaviour
         controls.Player.Movement.performed += OnMovement;
         controls.Player.Movement.canceled += OnMovementCancel;
         controls.Player.Jump.performed += OnJump;
+        controls.Player.Attackinitiate.performed += OnAttackInitiate;
     }
 
     private void Start()
     {
         playerJump = GetComponent<PlayerJump>();
-        playerMovement = GetComponent<PlayerMovement>();
+        playerAttack = GetComponent<PlayerAttack>();
     }
     //Enables/Disables "Player" action map
     private void OnEnable()
@@ -49,5 +51,10 @@ public class UpdatedInputHandler : MonoBehaviour
     private void OnJump(InputAction.CallbackContext context)
     {
         playerJump.Jump();
+    }
+
+    private void OnAttackInitiate(InputAction.CallbackContext context)
+    {
+        playerAttack.GetTarget();
     }
 }

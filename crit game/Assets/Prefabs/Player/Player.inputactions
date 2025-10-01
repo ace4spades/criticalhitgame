@@ -16,18 +16,27 @@
                     "initialStateCheck": true
                 },
                 {
-                    "name": "Sprint",
+                    "name": "Jump",
                     "type": "Button",
-                    "id": "0a07b37b-8f81-4d13-82b7-be5aa3257c6e",
+                    "id": "3a3f36d2-a9c2-48b0-bde8-9d5820c27800",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
                     "initialStateCheck": false
                 },
                 {
-                    "name": "Jump",
+                    "name": "Attack initiate",
                     "type": "Button",
-                    "id": "3a3f36d2-a9c2-48b0-bde8-9d5820c27800",
+                    "id": "278134e0-834b-439e-b861-adce0a40f386",
+                    "expectedControlType": "",
+                    "processors": "",
+                    "interactions": "",
+                    "initialStateCheck": false
+                },
+                {
+                    "name": "Attack confirm",
+                    "type": "Button",
+                    "id": "63b4d5a0-c9a2-4393-b02c-0b4e85c52427",
                     "expectedControlType": "",
                     "processors": "",
                     "interactions": "",
@@ -103,12 +112,23 @@
                 },
                 {
                     "name": "",
-                    "id": "d26691b2-a8aa-405e-9a0a-2e59f8861cf2",
-                    "path": "",
+                    "id": "2cce2110-e47b-4f33-956e-87ec8abef8d7",
+                    "path": "<Keyboard>/e",
                     "interactions": "",
                     "processors": "",
                     "groups": "",
-                    "action": "Sprint",
+                    "action": "Attack initiate",
+                    "isComposite": false,
+                    "isPartOfComposite": false
+                },
+                {
+                    "name": "",
+                    "id": "9e78c0c8-fb84-4b0e-9d69-35de2d159715",
+                    "path": "<Mouse>/leftButton",
+                    "interactions": "",
+                    "processors": "",
+                    "groups": "",
+                    "action": "Attack confirm",
                     "isComposite": false,
                     "isPartOfComposite": false
                 }
