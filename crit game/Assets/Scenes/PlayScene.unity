@@ -202,9 +202,21 @@ PrefabInstance:
       propertyPath: 'm_Materials.Array.data[0]'
       value: 
       objectReference: {fileID: 2100000, guid: 84539903ca0b89a49bd52783498e8f96, type: 2}
+    - target: {fileID: -4091792821388611644, guid: e722c57a60ced1341bf40f622e3596d8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: -3718371245222020591, guid: e722c57a60ced1341bf40f622e3596d8, type: 3}
+      propertyPath: m_Layer
+      value: 6
+      objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e722c57a60ced1341bf40f622e3596d8, type: 3}
       propertyPath: m_Name
       value: island1
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e722c57a60ced1341bf40f622e3596d8, type: 3}
+      propertyPath: m_Layer
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 8006827931920951818, guid: e722c57a60ced1341bf40f622e3596d8, type: 3}
       propertyPath: 'm_Materials.Array.data[0]'

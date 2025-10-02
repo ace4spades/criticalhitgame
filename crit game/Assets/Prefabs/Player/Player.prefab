@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 2535635406493324368}
   - component: {fileID: 4264866595570410123}
   - component: {fileID: 8294424626964283205}
-  - component: {fileID: 224597992112856970}
+  - component: {fileID: 4143578309848507743}
   - component: {fileID: 5088853550047479225}
   m_Layer: 7
   m_Name: Player
@@ -85,8 +85,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0aba3d68f3f24b850d818f0037c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  playerMaxHealth: 0
-  playerCurrentHealth: 0
+  playerMaxHealth: 100
+  playerCurrentHealth: 100
   movementSpeed: 10
   jumpHeight: 2.5
 --- !u!114 &4944340034440616267
@@ -177,29 +177,33 @@ CharacterController:
   m_SkinWidth: 0.08
   m_MinMoveDistance: 0.001
   m_Center: {x: 0, y: 1, z: 0}
---- !u!136 &224597992112856970
-CapsuleCollider:
+--- !u!54 &4143578309848507743
+Rigidbody:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 773905546666267008}
-  m_Material: {fileID: 0}
+  serializedVersion: 4
+  m_Mass: 1
+  m_Drag: 0
+  m_AngularDrag: 0.05
+  m_CenterOfMass: {x: 0, y: 0, z: 0}
+  m_InertiaTensor: {x: 1, y: 1, z: 1}
+  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
   m_ExcludeLayers:
     serializedVersion: 2
     m_Bits: 0
-  m_LayerOverridePriority: 0
-  m_IsTrigger: 0
-  m_ProvidesContacts: 0
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Radius: 0.5
-  m_Height: 1.9856627
-  m_Direction: 1
-  m_Center: {x: 0, y: 1.0144285, z: 0}
+  m_ImplicitCom: 1
+  m_ImplicitTensor: 1
+  m_UseGravity: 0
+  m_IsKinematic: 1
+  m_Interpolate: 0
+  m_Constraints: 80
+  m_CollisionDetection: 0
 --- !u!95 &5088853550047479225
 Animator:
   serializedVersion: 7
