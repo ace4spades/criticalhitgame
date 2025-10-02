@@ -314,6 +314,7 @@ GameObject:
   - component: {fileID: 4059766080278121163}
   - component: {fileID: 1000905213412843067}
   - component: {fileID: 310833656861550432}
+  - component: {fileID: 8828704368163767504}
   - component: {fileID: 3885481046568315240}
   - component: {fileID: 3729662268775018065}
   - component: {fileID: 4519361758112915633}
@@ -413,6 +414,24 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 80
   m_CollisionDetection: 0
+--- !u!114 &8828704368163767504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750272318124498477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a1f8d3c5dbcf34d499dcfaa82fb0cdeb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 100
+  chaseSpeed: 5
+  damage: 10
+  attackSpeed: 1
+  attackRange: 9
+  attackLifespan: 0.5
 --- !u!114 &3885481046568315240
 MonoBehaviour:
   m_ObjectHideFlags: 0

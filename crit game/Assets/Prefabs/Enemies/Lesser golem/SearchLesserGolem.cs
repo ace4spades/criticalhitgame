@@ -12,11 +12,14 @@ public class SearchLesserGolem : Enemy
     //Reference variables
     private StateMachineGolem stateMachine;
     private NavMeshAgent agent;
+    private GolemValues golemValues;
+
     private void Start()
     {
         playerMask = LayerMask.GetMask("Player");
         stateMachine = GetComponent<StateMachineGolem>();
         agent = GetComponent<NavMeshAgent>();
+        golemValues = GetComponent<GolemValues>();
     }
     //Detection logic
     IEnumerator Searching()
@@ -29,7 +32,7 @@ public class SearchLesserGolem : Enemy
         if (playersSpotted.Length > 0)
         {
             agent.ResetPath();
-            agent.speed = 5f;
+            agent.speed = golemValues.chaseSpeed;
             stateMachine.state = StateMachineGolem.State.Chasing;
             StopCoroutine(Searching());
         }

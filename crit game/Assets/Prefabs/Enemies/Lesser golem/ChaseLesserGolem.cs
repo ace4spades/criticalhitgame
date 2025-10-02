@@ -8,14 +8,13 @@ public class ChaseLesserGolem : Enemy
     [SerializeField] public Transform playerTransform;
     private StateMachineGolem stateMachine;
     private NavMeshAgent agent;
-
-    //Value variables
-    public float attackRange = 9f;
+    private GolemValues golemValues;
 
     private void Start()
     {
         stateMachine = GetComponent<StateMachineGolem>();
         agent = GetComponent<NavMeshAgent>();
+        golemValues = GetComponent<GolemValues>();
     }
 
 
@@ -24,7 +23,7 @@ public class ChaseLesserGolem : Enemy
     {
         agent.SetDestination(playerTransform.position);
 
-        if (Vector3.Distance(transform.position, playerTransform.position) <= attackRange)
+        if (Vector3.Distance(transform.position, playerTransform.position) <= golemValues.attackRange)
         {
             agent.ResetPath();
             stateMachine.state = StateMachineGolem.State.Attacking;

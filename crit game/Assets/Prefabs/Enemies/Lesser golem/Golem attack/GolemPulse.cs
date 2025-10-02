@@ -4,21 +4,20 @@ public class GolemPulse : MonoBehaviour
 {
     //Reference variables
     private PlayerHitManager playerHitManager;
+    private GolemValues golemValues;
 
-    //Value variables
-    private float destroyTimer = 0.5f;
-    void Start()
+    private void Start()
     {
         playerHitManager = FindFirstObjectByType<PlayerHitManager>();
-    }
-    private void Update()
-    {
-        Destroy(gameObject, destroyTimer);
+        golemValues = GetComponentInParent<GolemValues>();
+
+        Destroy(gameObject, golemValues.attackLifespan);
     }
 
+
+    //Trigger for the golem pulse attack
     public void OnTriggerEnter(Collider player)
     {
-        Debug.Log(player.name);
-        playerHitManager.TakeDamage(2f);
+        playerHitManager.TakeDamage(golemValues.damage);
     }
 }
