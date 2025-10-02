@@ -430,7 +430,7 @@ MonoBehaviour:
   chaseSpeed: 5
   damage: 10
   attackSpeed: 1
-  attackRange: 9
+  attackRange: 4
   attackLifespan: 0.5
 --- !u!114 &3885481046568315240
 MonoBehaviour:
@@ -494,7 +494,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 0}
-  attackRange: 3
 --- !u!114 &5425161706469006436
 MonoBehaviour:
   m_ObjectHideFlags: 0
