@@ -88,8 +88,9 @@ MonoBehaviour:
   playerMaxHealth: 100
   playerCurrentHealth: 100
   movementSpeed: 10
-  damage: 15
   jumpHeight: 2.5
+  damage: 15
+  attackCooldown: 0.5
 --- !u!114 &4944340034440616267
 MonoBehaviour:
   m_ObjectHideFlags: 0
