@@ -108,6 +108,59 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.5
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!1 &1633093021750964943
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 3637738658475225613}
+  - component: {fileID: 1559556691952096317}
+  m_Layer: 10
+  m_Name: Attack target
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &3637738658475225613
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633093021750964943}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 2.044939, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 4345047714821837231}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!135 &1559556691952096317
+SphereCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1633093021750964943}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Radius: 1.2189144
+  m_Center: {x: 0.01827085, y: 0, z: 0}
 --- !u!1 &2224914852842074836
 GameObject:
   m_ObjectHideFlags: 0
@@ -321,6 +374,7 @@ GameObject:
   - component: {fileID: 2746663758696152610}
   - component: {fileID: 7052557887464923564}
   - component: {fileID: 5425161706469006436}
+  - component: {fileID: 6995958814053436973}
   m_Layer: 8
   m_Name: Lesser golem
   m_TagString: Enemy
@@ -342,6 +396,7 @@ Transform:
   m_ConstrainProportionsScale: 0
   m_Children:
   - {fileID: 7628543902119530285}
+  - {fileID: 3637738658475225613}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!65 &4059766080278121163
@@ -426,7 +481,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f8d3c5dbcf34d499dcfaa82fb0cdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  health: 100
+  maxHealth: 50
+  currentHealth: 50
   chaseSpeed: 5
   damage: 10
   attackSpeed: 1
@@ -507,6 +563,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   golemPulse: {fileID: 168749906554525878, guid: 6605aafe19c7e7c41867e11b72b2b055, type: 3}
+--- !u!114 &6995958814053436973
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3750272318124498477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 008990b29b995e7479461ce33aa66de6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &5375319059432200127
 GameObject:
   m_ObjectHideFlags: 0

@@ -88,6 +88,7 @@ MonoBehaviour:
   playerMaxHealth: 100
   playerCurrentHealth: 100
   movementSpeed: 10
+  damage: 15
   jumpHeight: 2.5
 --- !u!114 &4944340034440616267
 MonoBehaviour:
@@ -113,7 +114,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a05dd4a208ec17f438bff4cf8b69080d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  doubleJumpParticle: {fileID: 5262595245996097840, guid: 47cabbff6a157c240814e2aef1fe2caa, type: 3}
 --- !u!114 &5539305008391373151
 MonoBehaviour:
   m_ObjectHideFlags: 0
