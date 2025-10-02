@@ -46,7 +46,6 @@ public class UpdatedInputHandler : MonoBehaviour
     private void OnMovementCancel(InputAction.CallbackContext context)
     {
         direction = Vector2.zero;
-        //playerMovement.CounterForce();
     }
     private void OnJump(InputAction.CallbackContext context)
     {

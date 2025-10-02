@@ -7,7 +7,7 @@ public class PlayerJump : MonoBehaviour
     //Reference variables
     private PlayerValues playerValues;
     private CharacterController controller;
-    [SerializeField] ParticleSystem doubleJumpParticle;
+
 
     //Value variables
     private float gravity = -20f;
