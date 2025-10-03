@@ -7,7 +7,7 @@ public class PlayerJump : MonoBehaviour
     //Reference variables
     private PlayerValues playerValues;
     private CharacterController controller;
-
+    public Animator animator;
 
     //Value variables
     private float gravity = -20f;
@@ -18,6 +18,7 @@ public class PlayerJump : MonoBehaviour
     {
         playerValues = GetComponent<PlayerValues>();
         controller = GetComponent<CharacterController>();
+        animator = GetComponentInChildren<Animator>();
     }
     private void Update()
     {
@@ -45,6 +46,16 @@ public class PlayerJump : MonoBehaviour
         } else
         {
             jumpBuffer = 0.25f;
+        }
+
+        //Air animation
+        if (controller.isGrounded == false)
+        {
+            animator.SetBool("isAirborne", true);
+        }
+        if (controller.isGrounded == true)
+        {
+            animator.SetBool("isAirborne", false);
         }
     }
 

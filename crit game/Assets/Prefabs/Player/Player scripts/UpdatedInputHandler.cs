@@ -45,7 +45,6 @@ public class UpdatedInputHandler : MonoBehaviour
     private void OnMovement(InputAction.CallbackContext context)
     {
         animator.SetBool("isMoving", true);
-        Debug.Log(animator.GetBool("isMoving"));
         direction = context.ReadValue<Vector2>();
     }
     private void OnMovementCancel(InputAction.CallbackContext context)
