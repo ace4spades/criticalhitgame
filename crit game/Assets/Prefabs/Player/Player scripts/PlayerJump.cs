@@ -71,7 +71,7 @@ public class PlayerJump : MonoBehaviour
         //2nd jump
         if (controller.isGrounded == false && jumpBuffer < 0)
         {
-            velocity.y = Mathf.Sqrt((playerValues.jumpHeight * 0.9f) * -2f * gravity);
+            velocity.y = Mathf.Sqrt(playerValues.jumpHeight * -2f * gravity);
             canDoubleJump = false;
             jumpBuffer = 0.25f;
         }

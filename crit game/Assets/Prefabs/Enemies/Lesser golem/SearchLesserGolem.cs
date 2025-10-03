@@ -20,7 +20,21 @@ public class SearchLesserGolem : Enemy
         stateMachine = GetComponent<StateMachineGolem>();
         agent = GetComponent<NavMeshAgent>();
         golemValues = GetComponent<GolemValues>();
+
+
     }
+
+    //Coroutine check
+    public void LookingForPlayer()
+    {
+        //Prevents too many player checks
+        if (coroutineRunning == false)
+        {
+            coroutineRunning = true;
+            StartCoroutine(Searching());
+        }
+    }
+
     //Detection logic
     IEnumerator Searching()
     {
@@ -39,15 +53,5 @@ public class SearchLesserGolem : Enemy
         //If player isn't spotted: return null
         coroutineRunning = false;
         yield return null;
-    }
-
-    public void LookingForPlayer()
-    {
-        //Prevents too many player checks
-        if (coroutineRunning == false)
-        {
-            coroutineRunning = true;
-            StartCoroutine(Searching());
-        }
     }
 }
