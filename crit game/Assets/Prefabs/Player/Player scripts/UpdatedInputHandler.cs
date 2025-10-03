@@ -10,9 +10,11 @@ public class UpdatedInputHandler : MonoBehaviour
     private PlayerActionMap controls;
     private PlayerJump playerJump;
     private PlayerAttack playerAttack;
+    public Animator animator;
 
     //Value variables
     public Vector2 direction;
+
 
     private void Awake()
     {
@@ -27,6 +29,7 @@ public class UpdatedInputHandler : MonoBehaviour
     {
         playerJump = GetComponent<PlayerJump>();
         playerAttack = GetComponent<PlayerAttack>();
+        animator = GetComponentInChildren<Animator>();
     }
     //Enables/Disables "Player" action map
     private void OnEnable()
@@ -41,10 +44,13 @@ public class UpdatedInputHandler : MonoBehaviour
     //Player input events
     private void OnMovement(InputAction.CallbackContext context)
     {
+        animator.SetBool("isMoving", true);
+        Debug.Log(animator.GetBool("isMoving"));
         direction = context.ReadValue<Vector2>();
     }
     private void OnMovementCancel(InputAction.CallbackContext context)
     {
+        animator.SetBool("isMoving", false);
         direction = Vector2.zero;
     }
     private void OnJump(InputAction.CallbackContext context)

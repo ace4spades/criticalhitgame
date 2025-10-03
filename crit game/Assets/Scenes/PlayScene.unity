@@ -694,6 +694,113 @@ MonoBehaviour:
   m_MinRegionArea: 2
   m_NavMeshData: {fileID: 23800000, guid: 28d89d14c55ae7746a89d1d7c70ec1c4, type: 2}
   m_BuildHeightMesh: 0
+--- !u!1 &662485756 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 4911497037151681024, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+  m_PrefabInstance: {fileID: 749145800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &662485757 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+  m_PrefabInstance: {fileID: 749145800}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &662485758
+Animator:
+  serializedVersion: 7
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662485756}
+  m_Enabled: 1
+  m_Avatar: {fileID: 9000000, guid: d738e3564f301f34d97b5261b0d1e32b, type: 2}
+  m_Controller: {fileID: 9100000, guid: 368d0ef5aae2569489d951b0d85c7483, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_AnimatePhysics: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!114 &662485759
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 662485756}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 050411c07c40f7b43ad68e579d0c2012, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!1001 &749145800
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 1172270392}
+    m_Modifications:
+    - target: {fileID: 4911497037151681024, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_Name
+      value: Basic_Character
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5720402916137722042, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents:
+    - targetCorrespondingSourceObject: {fileID: 4911497037151681024, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662485758}
+    - targetCorrespondingSourceObject: {fileID: 4911497037151681024, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662485759}
+  m_SourcePrefab: {fileID: 100100000, guid: 5bb095d3e14682a47b7f4ddea7721b82, type: 3}
 --- !u!1001 &798408838
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -865,6 +972,11 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 1be272bb657f08b4a90718186ea4bb61, type: 3}
+--- !u!4 &1172270392 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 8028808141651614664, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
+  m_PrefabInstance: {fileID: 1699810587987349481}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1444901070
 GameObject:
   m_ObjectHideFlags: 0
@@ -1513,9 +1625,21 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 5088853550047479225, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
+      propertyPath: m_Avatar
+      value: 
+      objectReference: {fileID: 9000000, guid: d738e3564f301f34d97b5261b0d1e32b, type: 2}
+    - target: {fileID: 5088853550047479225, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
+    m_RemovedGameObjects:
+    - {fileID: 201852472378379156, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
+    m_AddedGameObjects:
+    - targetCorrespondingSourceObject: {fileID: 8028808141651614664, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
+      insertIndex: -1
+      addedObject: {fileID: 662485757}
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a47db5acc85f1e642825fd0691d5eb7e, type: 3}
 --- !u!1001 &5540501235287665228
