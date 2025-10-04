@@ -7,8 +7,7 @@ public class PlayerAttack : MonoBehaviour
     private Camera playerCam;
     private LayerMask enemyMask;
     private PlayerValues playerValues;
-
-    
+    private AudioManager audioManager;
     private void Start()
     {
         //MOVE THIS TO OTHER SCRIPT
@@ -17,6 +16,7 @@ public class PlayerAttack : MonoBehaviour
         playerCam = Camera.main;
         enemyMask = LayerMask.GetMask("Attack targets");
         playerValues = GetComponent<PlayerValues>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
 
     private void Update()
@@ -34,6 +34,7 @@ public class PlayerAttack : MonoBehaviour
         if (Physics.Raycast(ray, out hit, Mathf.Infinity, enemyMask) && playerValues.attackCooldown <= 0)
         {
             HitManagerGolem target = hit.collider.GetComponentInParent<HitManagerGolem>();
+            audioManager.PlaySFX(audioManager.playerAttackSFX);
             target.TakeDamage(playerValues.damage);
             playerValues.attackCooldown = 0.5f;
         } 
