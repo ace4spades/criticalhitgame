@@ -7,12 +7,12 @@ public class SearchLesserGolem : Enemy
     //Value variables
     private bool coroutineRunning;
     private LayerMask playerMask;
-    private float aggroRange = 30f;
 
     //Reference variables
     private StateMachineGolem stateMachine;
     private NavMeshAgent agent;
     private GolemValues golemValues;
+    [SerializeField] GameObject spottedParticle;
 
     private void Start()
     {
@@ -41,10 +41,11 @@ public class SearchLesserGolem : Enemy
         yield return new WaitForSeconds(0.2f);
 
         //Detection spherecast
-        Collider[] playersSpotted = Physics.OverlapSphere(transform.position, aggroRange, playerMask);
+        Collider[] playersSpotted = Physics.OverlapSphere(transform.position, golemValues.aggroRange, playerMask);
         //If player is spotted: start chasing
         if (playersSpotted.Length > 0)
         {
+            Instantiate(spottedParticle, new Vector3(transform.position.x, transform.position.y + 2.044939f, transform.position.z), Quaternion.identity);
             agent.ResetPath();
             agent.speed = golemValues.chaseSpeed;
             stateMachine.state = StateMachineGolem.State.Chasing;

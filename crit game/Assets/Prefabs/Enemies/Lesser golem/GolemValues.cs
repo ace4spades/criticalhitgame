@@ -5,6 +5,7 @@ public class GolemValues : MonoBehaviour
     //Lesser golem stats
     [SerializeField] public float currentHealth;
 
+    [SerializeField] public float aggroRange;
     [SerializeField] public float chaseSpeed;
 
     [SerializeField] public float damage;

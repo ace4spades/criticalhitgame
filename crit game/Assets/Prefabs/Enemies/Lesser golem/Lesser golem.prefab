@@ -377,8 +377,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: a1f8d3c5dbcf34d499dcfaa82fb0cdeb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  maxHealth: 50
-  currentHealth: 50
+  currentHealth: 40
+  aggroRange: 20
   chaseSpeed: 5
   damage: 10
   attackSpeed: 1
@@ -433,6 +433,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42b048d57fe1e39418ad6ea15254208d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  spottedParticle: {fileID: 5526757830204248308, guid: 34a3cc3b3238cdb4b99e1f62f3c7cb11, type: 3}
 --- !u!114 &776690095420802694
 MonoBehaviour:
   m_ObjectHideFlags: 0
