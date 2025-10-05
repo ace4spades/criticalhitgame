@@ -89,6 +89,7 @@ MonoBehaviour:
   jumpHeight: 2.5
   damage: 15
   attackCooldown: 0.5
+  attackRange: 50
 --- !u!114 &4944340034440616267
 MonoBehaviour:
   m_ObjectHideFlags: 0

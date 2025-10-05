@@ -10,4 +10,5 @@ public class PlayerValues : MonoBehaviour
 
     [SerializeField] public float damage;
     [SerializeField] public float attackCooldown;
+    [SerializeField] public float attackRange;
 }

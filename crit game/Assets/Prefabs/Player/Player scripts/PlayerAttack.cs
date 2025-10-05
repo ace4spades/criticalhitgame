@@ -31,7 +31,7 @@ public class PlayerAttack : MonoBehaviour
 
         //Fires a ray to your cursor. If the ray hits an enemy's target trigger, it will run a TakeDamage method on the parent (enemy)
         //Has a short cooldown to prevent spamming using playerValues.attackCooldown
-        if (Physics.Raycast(ray, out hit, Mathf.Infinity, enemyMask) && playerValues.attackCooldown <= 0)
+        if (Physics.Raycast(ray, out hit, playerValues.attackRange, enemyMask) && playerValues.attackCooldown <= 0)
         {
             HitManagerGolem target = hit.collider.GetComponentInParent<HitManagerGolem>();
             audioManager.PlaySFX(audioManager.playerAttackSFX);

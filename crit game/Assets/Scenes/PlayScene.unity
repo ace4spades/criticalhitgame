@@ -2221,7 +2221,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 330585543}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08073806, y: 0, z: 0, w: 0.9967354}
+  m_LocalRotation: {x: 0.0807382, y: 0, z: 0, w: 0.99673533}
   m_LocalPosition: {x: 0, y: 4.607475, z: -6.791187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -10376,7 +10376,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!114 &1778942783
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11671,7 +11671,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2026041302}
   serializedVersion: 2
-  m_LocalRotation: {x: 0.08073806, y: 0, z: 0, w: 0.9967354}
+  m_LocalRotation: {x: 0.0807382, y: 0, z: 0, w: 0.99673533}
   m_LocalPosition: {x: 0, y: 4.607475, z: -6.791187}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
@@ -11846,7 +11846,7 @@ MonoBehaviour:
   TargetOffset: {x: 0, y: -0.38, z: 0}
   TrackerSettings:
     BindingMode: 4
-    PositionDamping: {x: 1, y: 1, z: 1}
+    PositionDamping: {x: 0, y: 0, z: 0}
     AngularDampingMode: 0
     RotationDamping: {x: 1, y: 1, z: 1}
     QuaternionDamping: 1
@@ -11880,7 +11880,7 @@ MonoBehaviour:
     Range: {x: -10, y: 45}
     Wrap: 0
     Recentering:
-      Enabled: 1
+      Enabled: 0
       Wait: 10
       Time: 2
     Restrictions: 0

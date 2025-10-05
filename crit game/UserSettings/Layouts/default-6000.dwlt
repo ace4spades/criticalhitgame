@@ -172,7 +172,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 100}
   m_MaxSize: {x: 16192, y: 16192}
   vertical: 1
-  controlID: 61
+  controlID: 56
   draggingID: 0
 --- !u!114 &8
 MonoBehaviour:
@@ -198,7 +198,7 @@ MonoBehaviour:
   m_MinSize: {x: 200, y: 50}
   m_MaxSize: {x: 16192, y: 8096}
   vertical: 0
-  controlID: 62
+  controlID: 57
   draggingID: 0
 --- !u!114 &9
 MonoBehaviour:
@@ -568,14 +568,14 @@ MonoBehaviour:
       e31: 0
       e32: 0
       e33: 1
-    - e00: 0.47281554
+    - e00: 0.88824177
       e01: 0
       e02: 0
-      e03: -8.640778
+      e03: -118.037476
       e10: 0
-      e11: 0.47281554
+      e11: 0.88824177
       e12: 0
-      e13: 135.34953
+      e13: -74.35074
       e20: 0
       e21: 0
       e22: 1
@@ -758,7 +758,7 @@ MonoBehaviour:
       scrollPos: {x: 0, y: 0}
       m_SelectedIDs: 
       m_LastClickedID: 0
-      m_ExpandedIDs: f8d9faffb0dafaff46e4faff94e7faffdceafaff005efbffda6efbff7470fbffd471fbff148bfbff508cfbffb88ffbfff690fbff2692fbff7e93fbffe094fbffd498fbff709bfbffbe9cfbffda9efbff80a2fbffcea5fbffb8abfbff02bafbff8ebbfbff3cbefbff68bffbff00c0fbff52c7fbff98c9fbfff0ccfbff74cdfbff20fbffff3cb00100cab0010012b80100fad30100
+      m_ExpandedIDs: d030fdff70defdff16e1fdff4ce4fdff24eafdff80ebfdffcef9fdfffcf9fffff4faffff12b100006ae00100
       m_RenameOverlay:
         m_UserAcceptedRename: 0
         m_Name: 
@@ -1348,9 +1348,9 @@ MonoBehaviour:
   m_AudioPlay: 0
   m_DebugDrawModesUseInteractiveLightBakingData: 0
   m_Position:
-    m_Target: {x: -7.0592623, y: 24.503065, z: 45.217945}
+    m_Target: {x: -52.48919, y: 30.70543, z: 10.465476}
     speed: 2
-    m_Value: {x: -7.0592623, y: 24.503065, z: 45.217945}
+    m_Value: {x: -52.48919, y: 30.70543, z: 10.465476}
   m_RenderMode: 0
   m_CameraMode:
     drawMode: 0
@@ -1396,13 +1396,13 @@ MonoBehaviour:
     m_GridAxis: 1
     m_gridOpacity: 0.5
   m_Rotation:
-    m_Target: {x: 0.06550559, y: 0.7467816, z: -0.07402935, w: 0.65787053}
+    m_Target: {x: -0.19245142, y: -0.39111927, z: 0.084020436, w: -0.89643824}
     speed: 2
-    m_Value: {x: 0.06550559, y: 0.7467816, z: -0.07402935, w: 0.65787053}
+    m_Value: {x: 0.19245142, y: 0.39111924, z: -0.084020436, w: 0.8964382}
   m_Size:
-    m_Target: 10
+    m_Target: 1.1408165
     speed: 2
-    m_Value: 10
+    m_Value: 1.1408165
   m_Ortho:
     m_Target: 0
     speed: 2
@@ -1483,7 +1483,7 @@ MonoBehaviour:
     m_SkipHidden: 1
     m_SearchArea: 1
     m_Folders:
-    - Assets/Prefabs/Enemies/Lesser golem
+    - Assets/Prefabs/Player/Player scripts
     m_Globs: []
     m_ProductIds: 
     m_AnyWithAssetOrigin: 0
@@ -1493,17 +1493,17 @@ MonoBehaviour:
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs/Enemies/Lesser golem
+  - Assets/Prefabs/Player/Player scripts
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\GLU\Jaar 2\Critical hit game\critical_hit_game\criticalhitgame\crit
     game
   m_LockTracker:
     m_IsLocked: 0
   m_FolderTreeState:
-    scrollPos: {x: 0, y: 84}
-    m_SelectedIDs: 0ab30000
-    m_LastClickedID: 45834
-    m_ExpandedIDs: 0000000036b7000038b700003ab700003cb700003eb7000040b7000042b70000
+    scrollPos: {x: 0, y: 0}
+    m_SelectedIDs: 3ee50000
+    m_LastClickedID: 58686
+    m_ExpandedIDs: 00000000caba0000ccba0000ceba0000d0ba0000d2ba0000d4ba0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1532,7 +1532,7 @@ MonoBehaviour:
     scrollPos: {x: 0, y: 0}
     m_SelectedIDs: 
     m_LastClickedID: 0
-    m_ExpandedIDs: 0000000036b7000038b700003ab700003cb700003eb7000040b7000042b70000
+    m_ExpandedIDs: 00000000caba0000ccba0000ceba0000d0ba0000d2ba0000d4ba0000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -1665,7 +1665,7 @@ MonoBehaviour:
   m_ObjectsLockedBeforeSerialization: []
   m_InstanceIDsLockedBeforeSerialization: 
   m_PreviewResizer:
-    m_CachedPref: 151
+    m_CachedPref: -151
     m_ControlHash: -371814159
     m_PrefName: Preview_InspectorPreview
   m_LastInspectedObjectInstanceID: -1
