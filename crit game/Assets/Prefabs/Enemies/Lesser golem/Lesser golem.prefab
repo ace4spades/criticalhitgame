@@ -378,7 +378,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   currentHealth: 40
-  aggroRange: 20
+  aggroRange: 30
   chaseSpeed: 5
   damage: 10
   attackSpeed: 1

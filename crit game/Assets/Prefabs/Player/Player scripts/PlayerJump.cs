@@ -12,8 +12,13 @@ public class PlayerJump : MonoBehaviour
     //Value variables
     private float gravity = -20f;
     private Vector3 velocity;
+
     private bool canDoubleJump = false;
     private float jumpBuffer = 0.25f;
+
+    private float coyoteTime = 0.1f;
+    private float lastGroundedTime;
+
     private void Start()
     {
         playerValues = GetComponent<PlayerValues>();
@@ -63,7 +68,7 @@ public class PlayerJump : MonoBehaviour
     public void Jump()
     {
         //1st jump
-        if (controller.isGrounded == true)
+        if (controller.isGrounded == true || Time.time - lastGroundedTime <= coyoteTime)
         {
             velocity.y = Mathf.Sqrt(playerValues.jumpHeight * -2f * gravity);
             canDoubleJump = true;

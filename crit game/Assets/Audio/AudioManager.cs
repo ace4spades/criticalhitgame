@@ -7,6 +7,7 @@ public class AudioManager : MonoBehaviour
 
     [SerializeField] public AudioClip music;
     [SerializeField] public AudioClip playerAttackSFX;
+    [SerializeField] public AudioClip healthPickupSFX;
 
 
     private void Start()

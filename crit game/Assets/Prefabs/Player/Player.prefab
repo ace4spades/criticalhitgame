@@ -84,12 +84,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d6c0aba3d68f3f24b850d818f0037c9b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  playerMaxHealth: 100
   playerCurrentHealth: 100
   movementSpeed: 10
   jumpHeight: 2.5
   damage: 15
   attackCooldown: 0.5
-  attackRange: 50
+  attackRange: 30
 --- !u!114 &4944340034440616267
 MonoBehaviour:
   m_ObjectHideFlags: 0
