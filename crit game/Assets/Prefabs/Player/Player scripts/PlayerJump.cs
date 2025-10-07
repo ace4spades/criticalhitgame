@@ -8,6 +8,7 @@ public class PlayerJump : MonoBehaviour
     private PlayerValues playerValues;
     private CharacterController controller;
     public Animator animator;
+    private AudioManager audioManager;
 
     //Value variables
     private float gravity = -20f;
@@ -24,6 +25,7 @@ public class PlayerJump : MonoBehaviour
         playerValues = GetComponent<PlayerValues>();
         controller = GetComponent<CharacterController>();
         animator = GetComponentInChildren<Animator>();
+        audioManager = FindFirstObjectByType<AudioManager>();
     }
     private void Update()
     {
@@ -70,12 +72,14 @@ public class PlayerJump : MonoBehaviour
         //1st jump
         if (controller.isGrounded == true || Time.time - lastGroundedTime <= coyoteTime)
         {
+            audioManager.PlaySFX(audioManager.playerJump);
             velocity.y = Mathf.Sqrt(playerValues.jumpHeight * -2f * gravity);
             canDoubleJump = true;
         }
         //2nd jump
         if (controller.isGrounded == false && jumpBuffer < 0)
         {
+            audioManager.PlaySFX(audioManager.playerJump);
             velocity.y = Mathf.Sqrt(playerValues.jumpHeight * -2f * gravity);
             canDoubleJump = false;
             jumpBuffer = 0.25f;

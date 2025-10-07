@@ -12688,9 +12688,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   musicSource: {fileID: 997248557}
   sfxSource: {fileID: 1862452723}
-  music: {fileID: 8300000, guid: fc98598c7150ddb4ca4e751cb90c87e0, type: 3}
+  music: {fileID: 8300000, guid: edb519c48e9ebc54498ee77970ee033f, type: 3}
   playerAttackSFX: {fileID: 8300000, guid: 00c63f1d840cfdc4396cdc26e22db12e, type: 3}
   healthPickupSFX: {fileID: 8300000, guid: a6a218b232ea9ef43a6d4a4d1b5c71cb, type: 3}
+  playerJump: {fileID: 8300000, guid: 59dbba560fca7fc45b6c833a2bd3b631, type: 3}
 --- !u!4 &1778942784
 Transform:
   m_ObjectHideFlags: 0

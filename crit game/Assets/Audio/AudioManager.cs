@@ -8,12 +8,13 @@ public class AudioManager : MonoBehaviour
     [SerializeField] public AudioClip music;
     [SerializeField] public AudioClip playerAttackSFX;
     [SerializeField] public AudioClip healthPickupSFX;
+    [SerializeField] public AudioClip playerJump;
 
 
     private void Start()
     {
         //Volume change with slider
-        musicSource.volume = 0.4f;
+        //musicSource.volume = 0.4f;
 
         musicSource.clip = music;
         musicSource.Play();
